@@ -1,0 +1,17 @@
+﻿@using MVCDemo.Models;
+@model IEnumerable<MVCDemo.Models.Department>
+@{
+    ViewBag.Title = "Departments List";
+}
+<div style="font-family:Arial">
+    <h2>Departman Listesi</h2>
+    <ul>
+        @foreach (Department department in @Model)
+        {
+            <li>
+                @Html.ActionLink(department.Name, "Index","Employee", new { departmentID = department.ID },null);
+            </li>
+        }
+
+    </ul>
+</div>

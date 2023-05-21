@@ -1,0 +1,19 @@
+﻿@model IEnumerable<MvcOmer.Models.Calisan>
+@using MvcOmer.Models;
+@{
+    ViewBag.Title = "calisans List";
+}
+<div style="font-family:Arial"
+     <h2> Employee List</h2>
+<ul>
+    @foreach (Calisan calisan in Model)
+    {
+                <li>
+                    @Html.ActionLink(calisan.Ad +" "+ calisan.Soyad, "Detay", new { id = calisan.CalisanID })
+                </li>
+            }
+
+</ul>
+<h2>Index</h2>
+
+

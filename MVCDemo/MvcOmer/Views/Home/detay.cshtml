@@ -1,0 +1,53 @@
+﻿@model MvcOmer.Models.Calisan
+
+@{
+    ViewBag.Title = "calisan Details";
+}
+
+<h2>Employee Details</h2>
+
+<style>
+    table {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    td b {
+        font-weight: bold;
+    }
+
+    td:first-child {
+        width: 120px;
+    }
+</style>
+
+<table>
+    <tr>
+        <td><b>Çalışan:</b></td>
+        <td>@Model.CalisanID</td>
+    </tr>
+    <tr>
+        <td><b>Ad:</b></td>
+        <td>@Model.Ad</td>
+    </tr>
+    <tr>
+        <td><b>Soyad:</b></td>
+        <td>@Model.Soyad</td>
+    </tr>
+    <tr>
+        <td><b>Cihaz:</b></td>
+        <td>@Model.Cihaz</td>
+    </tr>
+</table>
+<a href="@Url.Action("Index", "Home")" class="btn btn-info style= " float">Geri Dön</a>
